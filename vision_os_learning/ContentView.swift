@@ -22,18 +22,18 @@ struct ContentView: View {
             }
             .navigationTitle("Sidebar")
             .navigationBarItems(trailing:
-                    Button(action: {
-                        print("Button clicked!")
-//                        openWindow(id:"planet-earth")
-                        EarthView()
-                    }) {
-                        Image(systemName: "plus")
-                    }
-                )
+                                    Button(action: {
+                print("Button clicked!")
+                //                        openWindow(id:"planet-earth")
+                EarthView()
+            }) {
+                Image(systemName: "plus")
+            }
+            )
         } detail: {
             VStack {
                 Text("Hello, world")
-
+                
             }
             .navigationTitle("Content")
             .padding()
@@ -41,21 +41,9 @@ struct ContentView: View {
     }
 }
 
-struct EarthView: View {
-    var body: some View {
-        VStack {
-            Model3D(named: "Earth_1_12756") { model in
-                        model
-                            .resizable()
-                            .scaledToFit()
-                    } placeholder: {
-                          ProgressView()
-                    }
-        }
-    }
-}
 
 
 #Preview {
     ContentView()
 }
+
