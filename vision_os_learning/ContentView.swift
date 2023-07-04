@@ -9,25 +9,52 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
+
 struct ContentView: View {
+    @Environment(\.openWindow) private var openWindow
+    
     var body: some View {
         NavigationSplitView {
             List {
-                Text("Item")
+                NavigationLink(destination: EarthView()) {
+                    Text("Earth")
+                }
             }
             .navigationTitle("Sidebar")
+            .navigationBarItems(trailing:
+                    Button(action: {
+                        print("Button clicked!")
+//                        openWindow(id:"planet-earth")
+                        EarthView()
+                    }) {
+                        Image(systemName: "plus")
+                    }
+                )
         } detail: {
             VStack {
-                Model3D(named: "Scene", bundle: realityKitContentBundle)
-                    .padding(.bottom, 50)
+                Text("Hello, world")
 
-                Text("Hello, world!")
             }
             .navigationTitle("Content")
             .padding()
         }
     }
 }
+
+struct EarthView: View {
+    var body: some View {
+        VStack {
+            Model3D(named: "Earth_1_12756") { model in
+                        model
+                            .resizable()
+                            .scaledToFit()
+                    } placeholder: {
+                          ProgressView()
+                    }
+        }
+    }
+}
+
 
 #Preview {
     ContentView()

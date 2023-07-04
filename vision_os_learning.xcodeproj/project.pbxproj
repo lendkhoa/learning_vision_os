@@ -12,6 +12,7 @@
 		6AD606732A53DE0100087869 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD606722A53DE0100087869 /* ContentView.swift */; };
 		6AD606752A53DE0200087869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AD606742A53DE0200087869 /* Assets.xcassets */; };
 		6AD606782A53DE0200087869 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AD606772A53DE0200087869 /* Preview Assets.xcassets */; };
+		6AD6067F2A547E9300087869 /* Earth_1_12756.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6AD6067E2A547E9300087869 /* Earth_1_12756.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		6AD606722A53DE0100087869 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6AD606742A53DE0200087869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AD606772A53DE0200087869 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6AD6067E2A547E9300087869 /* Earth_1_12756.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Earth_1_12756.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		6AD6066B2A53DE0100087869 /* vision_os_learning */ = {
 			isa = PBXGroup;
 			children = (
+				6AD6067E2A547E9300087869 /* Earth_1_12756.usdz */,
 				6AD606702A53DE0100087869 /* vision_os_learningApp.swift */,
 				6AD606722A53DE0100087869 /* ContentView.swift */,
 				6AD606742A53DE0200087869 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AD606782A53DE0200087869 /* Preview Assets.xcassets in Resources */,
+				6AD6067F2A547E9300087869 /* Earth_1_12756.usdz in Resources */,
 				6AD606752A53DE0200087869 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
