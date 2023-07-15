@@ -19,6 +19,9 @@ struct ContentView: View {
                 NavigationLink(destination: EarthView()) {
                     Text("Earth")
                 }
+                NavigationLink(destination: OrbitView()) {
+                    Text("Orbit")
+                }
             }
             .navigationTitle("Sidebar")
             .navigationBarItems(trailing:

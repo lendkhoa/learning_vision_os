@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A91D1092A632DCA009BB773 /* clipper_spacecraft.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6A91D1082A632DCA009BB773 /* clipper_spacecraft.usdz */; };
 		6AD6066F2A53DE0100087869 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 6AD6066E2A53DE0100087869 /* RealityKitContent */; };
 		6AD606712A53DE0100087869 /* vision_os_learningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD606702A53DE0100087869 /* vision_os_learningApp.swift */; };
 		6AD606732A53DE0100087869 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD606722A53DE0100087869 /* ContentView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A91D1082A632DCA009BB773 /* clipper_spacecraft.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = clipper_spacecraft.usdz; sourceTree = "<group>"; };
 		6AD606692A53DE0100087869 /* vision_os_learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vision_os_learning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD6066D2A53DE0100087869 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		6AD606702A53DE0100087869 /* vision_os_learningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vision_os_learningApp.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				6AD6067E2A547E9300087869 /* Earth_1_12756.usdz */,
+				6A91D1082A632DCA009BB773 /* clipper_spacecraft.usdz */,
 				6AD606872A54A9D400087869 /* Earth_1_12756.scn */,
 				6AD606702A53DE0100087869 /* vision_os_learningApp.swift */,
 				6AD606722A53DE0100087869 /* ContentView.swift */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AD606782A53DE0200087869 /* Preview Assets.xcassets in Resources */,
+				6A91D1092A632DCA009BB773 /* clipper_spacecraft.usdz in Resources */,
 				6AD6067F2A547E9300087869 /* Earth_1_12756.usdz in Resources */,
 				6AD606862A5497EF00087869 /* Assets.xcassets in Resources */,
 				6AD606882A54A9D400087869 /* Earth_1_12756.scn in Resources */,

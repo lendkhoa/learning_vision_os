@@ -10,27 +10,32 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
-import SwiftUI
-import RealityKit
-
-struct Orbit: View {
-    let earth: Entity
-
+struct OrbitView: View {
+    
     var body: some View {
-        RealityView { content in
-                    async let earth = ModelEntity(named: "Earth")
-                    async let moon = ModelEntity(named: "Moon")
-
-                    if let earth = try? await earth, let moon = try? await moon {
-                        content.add(earth)
-                        content.add(moon)
-                        moon.position = [0.5, 0, 0]
-                    }
+        GeometryReader3D { geometry in
+            RealityView { content in
+                
+                async let earth = ModelEntity(named: "Earth_1_12756")
+                async let satellite = ModelEntity(named: "clipper_spacecraft")
+                
+                if let earth = try? await earth, let satellite = try? await satellite{
+                    let bounds = content.convert(geometry.frame(in: .local),
+                                                 from: .local, to: content)
+                    let minExtent = bounds.extents.min()
+                    earth.scale = [0.004, 0.004, 0.004]
+                    satellite.scale = [0.001, 0.002, 0.001]
+                    print(" MinExtent \(minExtent)")
+                    
+                    content.add(earth)
+                    content.add(satellite)
+                    satellite.position = [-0.4, 1, 0]
+                }
+            }
         }
     }
 }
 
-//#Preview {
-//    Orbit(earth: <#T##Entity#>)
-//}
-
+#Preview {
+    OrbitView().previewLayout(.sizeThatFits)
+}
