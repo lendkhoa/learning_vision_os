@@ -23,18 +23,44 @@ struct OrbitView: View {
                     let bounds = content.convert(geometry.frame(in: .local),
                                                  from: .local, to: content)
                     let minExtent = bounds.extents.min()
-                    earth.scale = [0.004, 0.004, 0.004]
+                    earth.scale = [0.001, 0.001, 0.001]
                     satellite.scale = [0.001, 0.002, 0.001]
                     print(" MinExtent \(minExtent)")
                     
                     content.add(earth)
                     content.add(satellite)
-                    satellite.position = [-0.4, 1, 0]
+                    earth.position = [0, 0, 0]
+                    satellite.position = [0, 0.5, -0.2]
+                    
+                    // add animation
+                    earth.orientation = simd_quatf(angle: .pi, axis: [0, 1, 0])
+                    let earthRotation = OrbitAnimation(name: "Orbit1",
+                                               duration: 30,
+                                               axis: [1, 0, 0],
+                                               startTransform: earth.transform,
+                                               bindTarget: .transform,
+                                               repeatMode: .repeat)
+                    if let animation1 = try? AnimationResource.generate(with: earthRotation) {
+                        earth.playAnimation(animation1)
+                    }
+                    
+                    // Playing a transform animation
+                    let satelliteOrbit = OrbitAnimation(name: "Orbit",
+                                               duration: 15,
+                                               axis: [0, 0, 1],
+                                               startTransform: satellite.transform,
+                                               bindTarget: .transform,
+                                               repeatMode: .repeat)
+                    
+                    if let animation = try? AnimationResource.generate(with: satelliteOrbit) {
+                        satellite.playAnimation(animation)
+                    }
                 }
             }
         }
     }
 }
+
 
 #Preview {
     OrbitView().previewLayout(.sizeThatFits)
