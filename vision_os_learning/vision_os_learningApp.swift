@@ -13,7 +13,7 @@ struct vision_os_learningApp: App {
         WindowGroup() {
             ContentView()
         }
-        .windowStyle(.volumetric)
+//        .windowStyle(.volumetric)
         .defaultSize(width: 0.8, height: 0.8, depth: 0.8, in: .meters)
     }
 }

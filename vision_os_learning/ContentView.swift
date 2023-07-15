@@ -24,15 +24,6 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Sidebar")
-            .navigationBarItems(trailing:
-                                    Button(action: {
-                print("Button clicked!")
-                //                        openWindow(id:"planet-earth")
-                EarthView()
-            }) {
-                Image(systemName: "plus")
-            }
-            )
         } detail: {
             VStack {
                 Text("Hello, world")
