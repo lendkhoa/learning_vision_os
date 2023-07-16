@@ -12,25 +12,31 @@ import RealityKitContent
 
 struct ContentView: View {
     @Environment(\.openWindow) private var openWindow
+    @State private var showOrbitView = false
     
     var body: some View {
-        NavigationSplitView {
-            List {
-                NavigationLink(destination: EarthView()) {
-                    Text("Earth")
-                }
-                NavigationLink(destination: OrbitView()) {
-                    Text("Orbit")
+        NavigationView {
+            if showOrbitView {
+                OrbitView()
+            } else {
+                NavigationSplitView {
+                    List {
+                        NavigationLink(destination: EarthView()) {
+                            Text("Earth")
+                        }
+                        Button("Orbit") {
+                            showOrbitView = true
+                        }
+                    }
+                    .navigationTitle("Sidebar")
+                } detail: {
+                    VStack {
+                        Text("Hello, world")
+                    }
+                    .navigationTitle("Content")
+                    .padding()
                 }
             }
-            .navigationTitle("Sidebar")
-        } detail: {
-            VStack {
-                Text("Hello, world")
-                
-            }
-            .navigationTitle("Content")
-            .padding()
         }
     }
 }
